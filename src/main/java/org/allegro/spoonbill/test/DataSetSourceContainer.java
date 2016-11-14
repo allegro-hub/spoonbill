@@ -15,7 +15,14 @@ public class DataSetSourceContainer {
         if (dataSetSources == null) {
             this.dataSetSources = sources;
         } else {
-            ArrayUtils.addAll(this.dataSetSources, sources);
+            this.dataSetSources = ArrayUtils.addAll(this.dataSetSources, sources);
+        }
+    }
+
+    public void removeDataSetSources(String[] sources) {
+
+        if (dataSetSources != null) {
+            this.dataSetSources = ArrayUtils.removeElements(this.dataSetSources, sources);
         }
     }
 }

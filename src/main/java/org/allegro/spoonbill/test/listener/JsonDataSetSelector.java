@@ -27,16 +27,37 @@ public class JsonDataSetSelector extends AbstractRunListener {
     }
 
     @Override
+    public void afterFeature(FeatureInfo feature) {
+
+        String[] dataSetSources = dataSetMap.get(feature.getName());
+        removeDataSetSourcesToContainer(dataSetSources);
+    }
+
+    @Override
     public void beforeSpec(SpecInfo spec) {
 
         String[] dataSetSources = dataSetMap.get(spec.getName());
         addDataSetSourcesToContainer(dataSetSources);
     }
 
+    @Override
+    public void afterSpec(SpecInfo spec) {
+
+        String[] dataSetSources = dataSetMap.get(spec.getName());
+        removeDataSetSourcesToContainer(dataSetSources);
+    }
+
     private void addDataSetSourcesToContainer(String[] dataSetSources) {
 
         if (dataSetSources != null) {
             container.addAllDataSetSources(dataSetSources);
+        }
+    }
+
+    private void removeDataSetSourcesToContainer(String[] dataSetSources) {
+
+        if (dataSetSources != null) {
+            container.removeDataSetSources(dataSetSources);
         }
     }
 
