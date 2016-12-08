@@ -1,6 +1,6 @@
 package org.allegro.spoonbill.test;
 
-import org.apache.commons.lang3.ArrayUtils;
+import org.allegro.spoonbill.test.util.ArrayUtils;
 
 public class DataSetSourceContainer {
 
@@ -15,7 +15,7 @@ public class DataSetSourceContainer {
         if (dataSetSources == null) {
             this.dataSetSources = sources;
         } else {
-            this.dataSetSources = ArrayUtils.addAll(this.dataSetSources, sources);
+            this.dataSetSources = ArrayUtils.addElements(this.dataSetSources, sources);
         }
     }
 
