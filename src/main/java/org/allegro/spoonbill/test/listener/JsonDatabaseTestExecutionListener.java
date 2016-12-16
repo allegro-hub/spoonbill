@@ -14,9 +14,7 @@ import org.springframework.test.context.support.AbstractTestExecutionListener;
 public class JsonDatabaseTestExecutionListener extends AbstractTestExecutionListener {
 
     private IDatabaseTester databaseTester;
-
     private IDatabaseConnection connection;
-
     private Stack<IDataSet> dataSets;
 
     public JsonDatabaseTestExecutionListener() {

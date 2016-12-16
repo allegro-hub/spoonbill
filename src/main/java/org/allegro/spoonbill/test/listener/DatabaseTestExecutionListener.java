@@ -15,7 +15,6 @@ import org.springframework.test.context.support.AbstractTestExecutionListener;
 public class DatabaseTestExecutionListener extends AbstractTestExecutionListener {
 
     private IDatabaseTester databaseTester;
-
     private IDatabaseConnection connection;
 
     @Override

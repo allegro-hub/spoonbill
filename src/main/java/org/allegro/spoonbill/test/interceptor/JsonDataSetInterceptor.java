@@ -20,7 +20,7 @@ public class JsonDataSetInterceptor extends AbstractMethodInterceptor {
     private IDatabaseTester databaseTester;
     private Stack<IDataSet> dataSets;
     private DataSetSourceContainer container;
-
+    
     public JsonDataSetInterceptor(SpecInfo spec, DataSetSourceContainer container) {
 
         this.spec = spec;
